@@ -37,4 +37,9 @@
    ESIA
    EGISOTB
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Функциональные структуры системы
 
+   message
+  
