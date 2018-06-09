@@ -1,0 +1,993 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Подсистема Формирования отчетов &mdash; Документация elvoucher 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Подсистема оперативной транзакционной обработки данных" href="POTOD.html" />
+    <link rel="prev" title="Подсистема информирования и доступа к информационным ресурсам" href="PODIR.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> elvoucher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program.html">Программное обеспечение системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arch.html">Функциональная архитектура системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POK.html">Подсистема оперативного контроля</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Подсистема Формирования отчетов</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Функция «Формирование аналитических отчетов»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Функция «Создание и сопровождение запросов периодической отчетности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Функция «Формирование статистических данных по туроператорам и другим участникам рынка»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">Функция «Предоставление доступа к результатам обработки и анализа данных»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Отчет «Оперативное состояние туроператоров»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">Отчет «Статистика по туроператорам»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">Отчет «Отчет по туроператору»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">Отчет «Статистика» по туроператору»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Отчет «Количество и объем туристических поездок»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">Отчет «Популярные направления»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">Отчет «Статистика загрузки ЭП»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">Отчет «Статистика загрузки ЭП туроператора»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">Отчет «Статистика загрузки ЭП за период»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">Отчет «Количетво и объем туристическиъ поезжок между Китаем и Россией»</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">Отчет финансовой организации</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">Отчет по выявленным нарушениям</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">Отчет по обработке нарушений</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POSHD.html">Подсистема ведения ПОСХД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PONSI.html">Подсистема ведения НСИ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mail.html">Почтовое взаимодействие с внешними системами</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UC.html">Обмен данными с удостоверяющим центром</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">elvoucher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Подсистема Формирования отчетов</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/POFO.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Подсистема Формирования отчетов<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Подсистема формирования отчетов (далее по тексту Подсистема ПОФО) предназначена для хранения и аналитической обработки данных.</p>
+<p>Подсистема ПОФО обеспечивает информационную поддержку деятельности пользователей Системы, формирование и визуализацию представления информации в табличном и графическом видах, выявление полезных тенденций в развитии туристской деятельности, необходимых для принятия решений.</p>
+<p>В Подсистеме ПОФО ИС&nbsp;ЭП предусмотрены следующие функциональные возможности (функции):</p>
+<ul class="simple">
+<li>формирование аналитических отчетов;</li>
+<li>создание и сопровождение запросов периодической отчетности;</li>
+<li>формирование статистических данных по туроператорам и другим участникам рынка;</li>
+<li>предоставление доступа к результатам обработки и анализа данных.</li>
+</ul>
+<div class="section" id="id2">
+<h2>Функция «Формирование аналитических отчетов»<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В системы отчеты разделены на два виды:</p>
+<ul class="simple">
+<li>статические отчеты;</li>
+<li>OLAP отчеты.</li>
+</ul>
+<p>В Системе реализована возможность формирования следующих отчетов:</p>
+<ul class="simple">
+<li>Отчет «Оперативное состояние туроператоров»;</li>
+<li>Отчет «Статистика по туроператорам»;</li>
+<li>Отчет «Отчет по туроператору»;</li>
+<li>Отчет «Статистика» по туроператору»;</li>
+<li>Отчет «Количество и объем туристических поездок»;</li>
+<li>Отчет «Популярные направления»;</li>
+<li>Отчет «Статистика загрузки ЭП»;</li>
+<li>Отчет «Статистика загрузки ЭП туроператора»;</li>
+<li>Отчет «Статистика загрузки ЭП за период»;</li>
+<li>Отчет «Количетво и объем туристическиъ поезжок между Китаем и Россией» (отчет формируется на основе данных получаемых из СИС Ростуризм);</li>
+<li>Отчет финансовой организации;</li>
+<li>Отчет по выявленным нарушениям;</li>
+<li>Отчет по обработке нарушений;</li>
+<li>Отчет «Активные туроператоры»;</li>
+<li>Отчет «Результаты обработки полученных обращений пользователей».</li>
+</ul>
+<p>В качестве инициализации процесса формирования отчета должны использоваться действия пользователей через ПОДИР (например, выбор типа и критериев отчета, и нажатие кнопки «Сформировать отчет»).</p>
+<p>Функция реализует создание новых форм отчетов с использованием конструктора отчетных форм. Все создаваемые отчеты попадают в Реестр отчетов. Реестр отчетов хранит название и описание всех отчетов создаваемых на основе конструктора отчетных форм.</p>
+<p>В качестве исходных данных для формирования отчетов используются сведения, хранящиеся в ПОСХД.</p>
+<p>Функция также позволяет создание новых форм отчетов с использованием конструктора отчетных форм.</p>
+</div>
+<div class="section" id="id3">
+<h2>Функция «Создание и сопровождение запросов периодической отчетности<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Функция создания и сопровождения запросов и периодической отчетности позволяет создать новые формы отчетов с использованием конструктора отчетных форм (шаблонов). Все создаваемые отчетные формы попадают в реестр отчетов с сохранением названия шаблона и параметров его формирования.</p>
+<p>Используя созданный шаблон пользователь системы может сформировать запрос на периодическое формирование отчета, указав:</p>
+<ul class="simple">
+<li>параметры выборки;</li>
+<li>периодичность формирования отчета;</li>
+<li>адрес электронной почты для получения отчета;</li>
+</ul>
+<p>тему отчета – уникальный идентификатор запроса на формирование периодического отчета, позволяющий создать несколько запросов на основе одного шаблона.</p>
+<p>Параметры запроса на создание периодических отчетов сохраняются в базе данных системы.</p>
+<p>В качестве инициализации процесса формирования отчета используются параметры периодичности формирования соответствующего отчета. Сформированный периодический отчет автоматически отправляется на электронные адреса, указанные в запросе.</p>
+<p>В качестве исходных данных для формирования отчетов используются сведения, хранящиеся в Подсистеме сбора и хранения данных.</p>
+<p>Параметры запроса на формирование периодического отчета могут быть скорректированы пользователем.</p>
+</div>
+<div class="section" id="id4">
+<h2>Функция «Формирование статистических данных по туроператорам и другим участникам рынка»<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Функция формирования статистических данных по туроператорам и другим участникам рынка позволяет сформировать определенные типы отчетов в различных разрезах на основе запросов пользователей.
+В качестве исходных данных для формирования статистических данных по туроператорам и настроенных списков адресов рассылки используются сведения, хранящиеся в Подсистеме сбора и хранения данных.
+В качестве инициализации процесса формирования отчета используются действия пользователей через Подсистему информирования и доступа к информационным ресурсам.</p>
+<p>Данная функция реализована в виде конструктора отчетов.</p>
+</div>
+<div class="section" id="id5">
+<h2>Функция «Предоставление доступа к результатам обработки и анализа данных»<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Функция предоставления доступа к результатам обработки и анализа данных подразумевает отображение в визуализированной форме отчетов через Подсистему информирования и доступа к информационным ресурсам.
+Функция позволяет формировать файлы отчетов в визуализированных формах: таблицы, графические диаграммы.
+Функция позволяет формировать файлы экспорта отчетности в следующие форматы электронных документов: CSV или PDF.
+Для доступа к функциям подсистемы используются АРМ «Ростуризм», АРМ «Туроператор» и АРМ «Филиал (подразделение)Туроператора».</p>
+</div>
+<div class="section" id="id6">
+<h2>Отчет «Оперативное состояние туроператоров»<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данный отчет является статическим.</p>
+<p>В данном отчете осуществляется сортировка по следующим полям:</p>
+<ul class="simple">
+<li>Код туроператора;</li>
+<li>Дата Окончания действия финансового обеспечения,</li>
+<li>Размер баланса,</li>
+<li>Доля баланса.</li>
+</ul>
+<p>В отчет входят следующие колонки:</p>
+<ul class="simple">
+<li>Номер ТО;</li>
+<li>Срок финансовой гарантии – ближайший срок окончания финансовой гарантии ТО;</li>
+<li>ФГ ЕФРТ – размер финансовых гарантий из ЕФРТ;</li>
+<li>Уровень ФО – уровень финансового обеспечения;</li>
+<li>Оплачено – сумма оплат по соответствующим ЭП;</li>
+<li>Размер баланса = Размер финансового обеспечения – Сумма оплат (путевок) всего;</li>
+<li>Доля баланса = Размер баланса / Уровень ФО.</li>
+</ul>
+<p>Система включает в отчет всех туроператоров и информацию о их действующих финансовых гарантиях. В случае если у туроператора несколько действующих финансовых гарантий введенных фин.гарантом, данные гарантии суммируются и в колонке «Срок финансовой гарантии» выводится ближайший срок окончания гарантии . В случае если у туроператора нет фин.гарантий введенных фин.гарантом, в колонку Уровень ФО дублируются гарантии из ЕФРТ. В колонке «Оплачено» выводится сумма всех ЭП данного туроператора со статусом «Подтверждена», «Забронирована» и статусом оплаты «Оплачено».</p>
+<p>Отчет собирается из куба vw_tour_operators_operational_status</p>
+<p>SQL запрос отчета</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="n">sss</span><span class="o">.</span><span class="n">tour_operator_id</span><span class="p">,</span>
+   <span class="n">sss</span><span class="o">.</span><span class="n">tour_operator_registry_id</span><span class="p">,</span>
+   <span class="n">sss</span><span class="o">.</span><span class="n">tour_operator_abbreviated_name</span><span class="p">,</span>
+   <span class="n">sss</span><span class="o">.</span><span class="n">financial_security_total_amount_from_registry</span><span class="p">,</span>
+   <span class="n">sss</span><span class="o">.</span><span class="n">financial_security_total_amount</span><span class="p">,</span>
+   <span class="n">sss</span><span class="o">.</span><span class="n">vouchers_paid_total</span><span class="p">,</span>
+   <span class="n">sss</span><span class="o">.</span><span class="n">financial_security_closest_end_date</span><span class="p">,</span>
+   <span class="n">COALESCE</span><span class="p">(</span><span class="n">sss</span><span class="o">.</span><span class="n">financial_security_total_amount</span><span class="p">,</span> <span class="mi">0</span><span class="p">::</span><span class="n">numeric</span><span class="p">)</span> <span class="o">-</span> <span class="n">COALESCE</span><span class="p">(</span><span class="n">sss</span><span class="o">.</span><span class="n">vouchers_paid_total</span><span class="p">,</span> <span class="mi">0</span><span class="p">::</span><span class="n">numeric</span><span class="p">)</span> <span class="n">AS</span> <span class="n">balance</span>
+  <span class="n">FROM</span> <span class="p">(</span> <span class="n">SELECT</span> <span class="n">ss</span><span class="o">.</span><span class="n">tour_operator_id</span><span class="p">,</span>
+           <span class="n">ss</span><span class="o">.</span><span class="n">tour_operator_registry_id</span><span class="p">,</span>
+           <span class="n">ss</span><span class="o">.</span><span class="n">tour_operator_abbreviated_name</span><span class="p">,</span>
+           <span class="nb">sum</span><span class="p">(</span><span class="n">fisregistry</span><span class="o">.</span><span class="n">amount</span><span class="p">)</span> <span class="n">AS</span> <span class="n">financial_security_total_amount_from_registry</span><span class="p">,</span>
+           <span class="nb">sum</span><span class="p">(</span><span class="n">COALESCE</span><span class="p">(</span><span class="n">fistotal</span><span class="o">.</span><span class="n">amount</span><span class="p">,</span> <span class="mi">0</span><span class="p">::</span><span class="n">bigint</span><span class="p">)</span> <span class="o">+</span> <span class="n">COALESCE</span><span class="p">(</span><span class="n">fisregistry</span><span class="o">.</span><span class="n">amount</span><span class="p">,</span> <span class="mi">0</span><span class="p">::</span><span class="n">bigint</span><span class="p">))</span> <span class="n">AS</span> <span class="n">financial_security_total_amount</span><span class="p">,</span>
+           <span class="n">ss</span><span class="o">.</span><span class="n">vouchers_paid_total</span><span class="p">,</span>
+           <span class="n">ss</span><span class="o">.</span><span class="n">financial_security_closest_end_date</span>
+          <span class="n">FROM</span> <span class="p">(</span> <span class="n">SELECT</span> <span class="n">t</span><span class="o">.</span><span class="n">id</span> <span class="n">AS</span> <span class="n">tour_operator_id</span><span class="p">,</span>
+                   <span class="n">t</span><span class="o">.</span><span class="n">registry_id</span> <span class="n">AS</span> <span class="n">tour_operator_registry_id</span><span class="p">,</span>
+                   <span class="n">t</span><span class="o">.</span><span class="n">abbreviated_name</span> <span class="n">AS</span> <span class="n">tour_operator_abbreviated_name</span><span class="p">,</span>
+                   <span class="nb">sum</span><span class="p">(</span><span class="n">o</span><span class="o">.</span><span class="n">cost</span><span class="p">)</span> <span class="n">AS</span> <span class="n">vouchers_paid_total</span><span class="p">,</span>
+                   <span class="n">fsi</span><span class="o">.</span><span class="n">valid_to</span> <span class="n">AS</span> <span class="n">financial_security_closest_end_date</span>
+                  <span class="n">FROM</span> <span class="n">tour_operator</span> <span class="n">t</span>
+                    <span class="n">LEFT</span> <span class="n">JOIN</span> <span class="n">vouchers</span> <span class="n">v</span> <span class="n">ON</span> <span class="n">t</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">v</span><span class="o">.</span><span class="n">tour_operator_id</span> <span class="n">AND</span> <span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">voucher_status_id</span> <span class="n">IN</span> <span class="p">(</span> <span class="n">SELECT</span> <span class="n">voucher_status</span><span class="o">.</span><span class="n">id</span>
+                          <span class="n">FROM</span> <span class="n">voucher_status</span>
+                         <span class="n">WHERE</span> <span class="n">voucher_status</span><span class="o">.</span><span class="n">codeiata</span><span class="p">::</span><span class="n">text</span> <span class="o">=</span> <span class="n">ANY</span> <span class="p">(</span><span class="n">ARRAY</span><span class="p">[</span><span class="s1">&#39;CF&#39;</span><span class="p">::</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;RD&#39;</span><span class="p">::</span><span class="n">text</span><span class="p">])))</span>
+                    <span class="n">LEFT</span> <span class="n">JOIN</span> <span class="n">orders</span> <span class="n">o</span> <span class="n">ON</span> <span class="n">v</span><span class="o">.</span><span class="n">order_id</span> <span class="o">=</span> <span class="n">o</span><span class="o">.</span><span class="n">id</span> <span class="n">AND</span> <span class="n">o</span><span class="o">.</span><span class="n">pay_status</span> <span class="o">=</span> <span class="mi">2</span>
+                    <span class="n">LEFT</span> <span class="n">JOIN</span> <span class="p">(</span> <span class="n">SELECT</span> <span class="n">fsi_1</span><span class="o">.</span><span class="n">tour_operator_id</span><span class="p">,</span>
+                           <span class="nb">min</span><span class="p">(</span><span class="n">fsi_1</span><span class="o">.</span><span class="n">valid_to</span><span class="p">)</span> <span class="n">AS</span> <span class="n">valid_to</span>
+                          <span class="n">FROM</span> <span class="n">financial_security_info</span> <span class="n">fsi_1</span>
+                         <span class="n">WHERE</span> <span class="n">now</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">fsi_1</span><span class="o">.</span><span class="n">valid_from</span> <span class="n">AND</span> <span class="n">now</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">fsi_1</span><span class="o">.</span><span class="n">valid_to</span>
+                         <span class="n">GROUP</span> <span class="n">BY</span> <span class="n">fsi_1</span><span class="o">.</span><span class="n">tour_operator_id</span><span class="p">)</span> <span class="n">fsi</span> <span class="n">ON</span> <span class="n">fsi</span><span class="o">.</span><span class="n">tour_operator_id</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">id</span>
+                 <span class="n">GROUP</span> <span class="n">BY</span> <span class="n">t</span><span class="o">.</span><span class="n">id</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">registry_id</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">abbreviated_name</span><span class="p">,</span> <span class="n">fsi</span><span class="o">.</span><span class="n">valid_to</span><span class="p">)</span> <span class="n">ss</span>
+            <span class="n">LEFT</span> <span class="n">JOIN</span> <span class="n">financial_security_info</span> <span class="n">fisregistry</span> <span class="n">ON</span> <span class="n">fisregistry</span><span class="o">.</span><span class="n">tour_operator_id</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">tour_operator_id</span> <span class="n">AND</span> <span class="n">now</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">fisregistry</span><span class="o">.</span><span class="n">valid_from</span> <span class="n">AND</span> <span class="n">now</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">fisregistry</span><span class="o">.</span><span class="n">valid_to</span> <span class="n">AND</span> <span class="n">fisregistry</span><span class="o">.</span><span class="n">financial_organization_id</span> <span class="n">IS</span> <span class="n">NULL</span>
+            <span class="n">LEFT</span> <span class="n">JOIN</span> <span class="n">financial_security_info</span> <span class="n">fistotal</span> <span class="n">ON</span> <span class="n">fistotal</span><span class="o">.</span><span class="n">tour_operator_id</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">tour_operator_id</span> <span class="n">AND</span> <span class="n">now</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">fistotal</span><span class="o">.</span><span class="n">valid_from</span> <span class="n">AND</span> <span class="n">now</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">fistotal</span><span class="o">.</span><span class="n">valid_to</span> <span class="n">AND</span> <span class="n">fistotal</span><span class="o">.</span><span class="n">financial_organization_id</span> <span class="n">IS</span> <span class="n">NOT</span> <span class="n">NULL</span>
+         <span class="n">GROUP</span> <span class="n">BY</span> <span class="n">ss</span><span class="o">.</span><span class="n">tour_operator_id</span><span class="p">,</span> <span class="n">ss</span><span class="o">.</span><span class="n">tour_operator_registry_id</span><span class="p">,</span> <span class="n">ss</span><span class="o">.</span><span class="n">tour_operator_abbreviated_name</span><span class="p">,</span> <span class="n">ss</span><span class="o">.</span><span class="n">vouchers_paid_total</span><span class="p">,</span> <span class="n">ss</span><span class="o">.</span><span class="n">financial_security_closest_end_date</span><span class="p">)</span> <span class="n">sss</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>Отчет «Статистика по туроператорам»<a class="headerlink" href="#id7" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данный отчет является OLAP отчетом.</p>
+<p>Отчет должен формироваться для выбранного периода времени. В отчет должны включаться туроператоры, количество путевок  за данный период времени, типы путевок.</p>
+<p>Правила отчета сортировки:</p>
+<ul class="simple">
+<li>Краткое наименование ТО;</li>
+<li>Тип путевки.</li>
+</ul>
+<p>В отчет включаются ЭП всех типов со статусом:</p>
+<ul class="simple">
+<li>CF – подтверждена;</li>
+<li>US – использована.</li>
+</ul>
+<p>В отчеты должны входить следующие колонки:</p>
+<ul class="simple">
+<li>Туроператор;</li>
+<li>Тип путевки;</li>
+<li>Количество путевок.</li>
+</ul>
+<p>Отчет собирается из куба vw_statistics_touroperators</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>tour_operator.id AS touroperator_id,
+tour_operator.abbreviated_name AS touroperator,
+voucher_type.name_rus AS vouchertype,
+c1.code_num AS destination_country,
+c1.short_name_rus AS destination_country_name,
+c2.code_num AS leaving_country,
+count(vouchers.id) AS countvouchers,
+vouchers.created_date::date AS createdate</div></blockquote>
+<dl class="docutils">
+<dt>FROM vouchers</dt>
+<dd>LEFT JOIN voucher_type ON vouchers.vouchertype_id = voucher_type.id
+LEFT JOIN tour_operator ON vouchers.tour_operator_id = tour_operator.id
+LEFT JOIN country c1 ON vouchers.destination_country_id = c1.id
+LEFT JOIN country c2 ON vouchers.leaving_country_id = c2.id</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE vouchers.voucher_status_id = 2 OR vouchers.voucher_status_id = 5
+GROUP BY tour_operator.id, tour_operator.abbreviated_name, voucher_type.name_rus, c1.code_num, c1.short_name_rus, c2.code_num, vouchers.created_date;</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id8">
+<h2>Отчет «Отчет по туроператору»<a class="headerlink" href="#id8" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данный отчет является OLAP отчетом.</p>
+<p>Отчет формируется для выбранного туроператора. В отчет включается информация по сумме путевок со статусом «Подтверждена», «Забронирована» и статусом оплаты «Оплачено» данного туроператора, странам путешествия данных путевок и финансовом обеспечении туроператора.</p>
+<p>В отчет входят следующие колонки:</p>
+<ul class="simple">
+<li>Срок гарантии – ближайший срок окончания финансовой гарантии ТО;</li>
+<li>Уровень ФО – уровень финансового обеспечения;</li>
+<li>ФГ ЕФРТ – размер финансовых гарантий из ЕФРТ;</li>
+<li>Размер баланса = Размер финансового обеспечения – Сумма оплат (путевок) всего;</li>
+<li>Доля баланса = Размер баланса / Уровень ФО;</li>
+<li>Страна – страна путешествия ЭП;</li>
+<li>Оплачено – сумма оплат по соответствующим ЭП.</li>
+</ul>
+<p>Система включает в отчет выбранного туроператора и информацию о его действующих финансовых гарантиях. В случае если у туроператора несколько действующих финансовых гарантий, данные гарантии суммируются и в колонке «Срок финансовой гарантии» выводится ближайший срок окончания гарантии. В колонке «Оплачено» выводится сумма всех ЭП данного туроператора со статусом «Подтверждена», «Забронирована» и статусом оплаты «Оплачена» по стране путешествия данной строки.</p>
+<p>Отчет собирается из куба vw_statistics_touroperators</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>CREATE OR REPLACE VIEW public.vw_report_for_touroperator AS</dt>
+<dd><dl class="first last docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>tour_operator.id AS touroperator_id,
+c1.name_rus AS dstcountry,
+count(v.id) AS vouchercount,
+sum(o.cost) AS cost,
+date_part(„year“::text, v.trip_start_date) AS year</div></blockquote>
+<dl class="docutils">
+<dt>FROM vouchers v</dt>
+<dd>LEFT JOIN tour_operator ON v.tour_operator_id = tour_operator.id
+LEFT JOIN country c1 ON v.destination_country_id = c1.id
+LEFT JOIN orders o ON v.order_id = o.id</dd>
+</dl>
+</div></blockquote>
+<dl class="docutils">
+<dt>WHERE (v.voucher_status_id IN ( SELECT voucher_status.id</dt>
+<dd><blockquote class="first">
+<div>FROM voucher_status</div></blockquote>
+<p class="last">WHERE voucher_status.codeiata::text = ANY (ARRAY[„CF“::text, „RD“::text]))) AND o.pay_status = 2</p>
+</dd>
+</dl>
+<p class="last">GROUP BY (date_part(„year“::text, v.trip_start_date)), c1.name_rus, tour_operator.id;</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="id9">
+<h2>Отчет «Статистика» по туроператору»<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данный отчет является OLAP отчетом.</p>
+<p>В отчет включаются ЭП всех типов со статусом:</p>
+<ul class="simple">
+<li>CF – подтверждена;</li>
+<li>US – использована.</li>
+</ul>
+<p>В отчеты должны входить следующие колонки:</p>
+<ul class="simple">
+<li>Страна;</li>
+<li>Тип путевки;</li>
+<li>Количество путевок.</li>
+</ul>
+<p>Отчет собирается из куба vw_statistics_touroperators</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>tour_operator.id AS touroperator_id,
+tour_operator.abbreviated_name AS touroperator,
+voucher_type.name_rus AS vouchertype,
+c1.code_num AS destination_country,
+c1.short_name_rus AS destination_country_name,
+c2.code_num AS leaving_country,
+count(vouchers.id) AS countvouchers,
+vouchers.created_date::date AS createdate</div></blockquote>
+<dl class="docutils">
+<dt>FROM vouchers</dt>
+<dd>LEFT JOIN voucher_type ON vouchers.vouchertype_id = voucher_type.id
+LEFT JOIN tour_operator ON vouchers.tour_operator_id = tour_operator.id
+LEFT JOIN country c1 ON vouchers.destination_country_id = c1.id
+LEFT JOIN country c2 ON vouchers.leaving_country_id = c2.id</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE vouchers.voucher_status_id = 2 OR vouchers.voucher_status_id = 5
+GROUP BY tour_operator.id, tour_operator.abbreviated_name, voucher_type.name_rus, c1.code_num, c1.short_name_rus, c2.code_num, vouchers.created_date;</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id10">
+<h2>Отчет «Количество и объем туристических поездок»<a class="headerlink" href="#id10" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данный отчет является OLAP отчетом.</p>
+<p>Система включает в отчет данные по вьехавшим в (выехавшим из) Россию туристам.</p>
+<p>В отчет включаются ЭП всех типов со статусом:</p>
+<ul class="simple">
+<li>CF – подтверждена;</li>
+<li>US – использована.</li>
+</ul>
+<p>В отчетвходят следующие колонки:</p>
+<ul class="simple">
+<li>Страна;</li>
+<li>Тип путевки;</li>
+<li>Количество путевок.</li>
+</ul>
+<p>Отчет собирается из куба vw_popdestinationstatistic</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>s._year AS year,
+s._quarter AS quarter,
+s._month AS month,
+s.src_country,
+s.src_country_code,
+s.dst_country,
+s.dst_country_code,
+count(1) AS cnt,
+s.voucher_type</div></blockquote>
+<dl class="docutils">
+<dt>FROM ( SELECT date_part(„year“::text, v.trip_start_date) AS _year,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>date_part(„quarter“::text, v.trip_start_date) AS _quarter,
+date_part(„month“::text, v.trip_start_date) AS _month,
+src_country.name_rus,
+src_country.short_name_rus AS src_country,
+src_country.code AS src_country_code,
+dst_country.short_name_rus AS dst_country,
+dst_country.code AS dst_country_code,
+vt.name_rus AS voucher_type</div></blockquote>
+<dl class="docutils">
+<dt>FROM vouchers v</dt>
+<dd>LEFT JOIN voucher_type vt ON v.vouchertype_id = vt.id
+LEFT JOIN voucher_status vs ON v.voucher_status_id = vs.id
+LEFT JOIN country src_country ON v.leaving_country_id = src_country.id
+LEFT JOIN country dst_country ON v.destination_country_id = dst_country.id</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE vs.code::text = „used“::text) s</p>
+</dd>
+</dl>
+</div></blockquote>
+<p class="last">GROUP BY s._year, s._quarter, s._month, s.src_country, s.src_country_code, s.dst_country, s.dst_country_code, s.voucher_type;</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id11">
+<h2>Отчет «Популярные направления»<a class="headerlink" href="#id11" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Отчет формируется для выбранного периода времени. В отчет включаются страны (прибытия или отправления в зависимости от отчета), количество туристов вьехавших(выехавших) в РФ за данный период времени.</p>
+<p>В отчет включаются ЭП всех типов со статусом:</p>
+<ul class="simple">
+<li>CF – подтверждена;</li>
+<li>US – использована.</li>
+</ul>
+<p>В отчеты входят следующие колонки:</p>
+<ul class="simple">
+<li>Страна;</li>
+<li>Тип путевки;</li>
+<li>Количество путевок.</li>
+</ul>
+<p>Отчет собирается из куба vw_popdestinationstatistic</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>s._year AS year,
+s._quarter AS quarter,
+s._month AS month,
+s.src_country,
+s.src_country_code,
+s.dst_country,
+s.dst_country_code,
+count(1) AS cnt,
+s.voucher_type</div></blockquote>
+<dl class="docutils">
+<dt>FROM ( SELECT date_part(„year“::text, v.trip_start_date) AS _year,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>date_part(„quarter“::text, v.trip_start_date) AS _quarter,
+date_part(„month“::text, v.trip_start_date) AS _month,
+src_country.name_rus,
+src_country.short_name_rus AS src_country,
+src_country.code AS src_country_code,
+dst_country.short_name_rus AS dst_country,
+dst_country.code AS dst_country_code,
+vt.name_rus AS voucher_type</div></blockquote>
+<dl class="docutils">
+<dt>FROM vouchers v</dt>
+<dd>LEFT JOIN voucher_type vt ON v.vouchertype_id = vt.id
+LEFT JOIN voucher_status vs ON v.voucher_status_id = vs.id
+LEFT JOIN country src_country ON v.leaving_country_id = src_country.id
+LEFT JOIN country dst_country ON v.destination_country_id = dst_country.id</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE vs.code::text = „used“::text) s</p>
+</dd>
+</dl>
+</div></blockquote>
+<p class="last">GROUP BY s._year, s._quarter, s._month, s.src_country, s.src_country_code, s.dst_country, s.dst_country_code, s.voucher_type;</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id12">
+<h2>Отчет «Статистика загрузки ЭП»<a class="headerlink" href="#id12" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Отчет формируется для всех путевок. В отчет включается информация о загрузке ЭП туроператорами, включаются успешные и неуспешные попытки за 30 дневный период.</p>
+<p>Система включает в отчет информацию о загрузке туроператорамипутевок за 30 дневный период до момента формирования отчета.</p>
+<p>В отчет входят следующие колонки:</p>
+<ul class="simple">
+<li>Дата загрузки;</li>
+<li>Всего заявок;</li>
+<li>Успешная загрузка;</li>
+<li>Ошибка загрузки.</li>
+</ul>
+<p>Отчет собирается из куба vw_load_voucherstat_period</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div><p>rh.request_date,
+sum(</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>CASE</dt>
+<dd>WHEN rh.request_status::text = „SUCCESS“::text THEN 1
+ELSE 0</dd>
+</dl>
+<p>END) AS success,</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>sum(</dt>
+<dd><dl class="first docutils">
+<dt>CASE</dt>
+<dd>WHEN rh.request_status::text = „ERROR“::text THEN 1
+ELSE 0</dd>
+</dl>
+<p class="last">END) AS error,</p>
+</dd>
+</dl>
+<p>count(*) AS total</p>
+</div></blockquote>
+<p>FROM request_history rh</p>
+</div></blockquote>
+<p class="last">WHERE rh.request_date &gt;= (now() - „30 days“::interval)::date
+GROUP BY rh.request_date;</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id13">
+<h2>Отчет «Статистика загрузки ЭП туроператора»<a class="headerlink" href="#id13" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Отчет формируется для выбранного туроператора. В отчет включается информация о загрузке ЭП туроператором, должны включаться успешные и неуспешные попытки за 30 дневный период.</p>
+<p>Система включает в отчет информацию о загрузке туроператором путевок за 30 дневный период до момента формирования отчета.</p>
+<p>В отчет входят следующие колонки:</p>
+<ul class="simple">
+<li>Дата загрузки;</li>
+<li>Всего заявок;</li>
+<li>Успешная загрузка;</li>
+<li>Ошибка загрузки.</li>
+</ul>
+<p>Отчет собирается из куба vw_load_voucherstatistic</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div><p>tour_operator.id AS touroperator_id,
+tour_operator.abbreviated_name AS touroperator,
+tour_operator.registry_id AS touroperator_registry,
+tour_operator.inn AS touroperator_inn,
+( SELECT count(rh2.id) AS count</p>
+<blockquote>
+<div><blockquote>
+<div>FROM request_history rh2</div></blockquote>
+<p>WHERE rh2.request_status::text = „SUCCESS“::text AND rh2.tour_operator_id = tour_operator.id AND rh2.request_date &gt;= (now() - „30 days“::interval)::date) AS success,</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>( SELECT count(rh3.id) AS count</dt>
+<dd><blockquote class="first">
+<div>FROM request_history rh3</div></blockquote>
+<p class="last">WHERE rh3.request_status::text = „ERROR“::text AND rh3.tour_operator_id = tour_operator.id AND rh3.request_date &gt;= (now() - „30 days“::interval)::date) AS error,</p>
+</dd>
+</dl>
+<p>count(rh.id) AS total</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>FROM request_history rh</dt>
+<dd>LEFT JOIN tour_operator ON rh.tour_operator_id = tour_operator.id</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE rh.request_date &gt;= (now() - „30 days“::interval)::date
+GROUP BY tour_operator.id;</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id14">
+<h2>Отчет «Статистика загрузки ЭП за период»<a class="headerlink" href="#id14" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Система включает в отчет информацию о загрузке туроператорами путевок за за выбранный период времени.</p>
+<p>В отчет входят следующие колонки:</p>
+<ul class="simple">
+<li>Краткое наименование туроператора;</li>
+<li>Количество успушных загрузок;</li>
+<li>Количество ошибок при загрузках;</li>
+<li>Общее количество заявок.</li>
+</ul>
+<p>Отчет собирается из куба vw_load_voucherstat_period</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div><p>tour_operator.id AS touroperator_id,
+tour_operator.abbreviated_name AS touroperator,
+tour_operator.registry_id AS touroperator_registry,
+tour_operator.inn AS touroperator_inn,
+sum(</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>CASE</dt>
+<dd>WHEN rh.request_status::text = „SUCCESS“::text THEN 1
+ELSE 0</dd>
+</dl>
+<p>END) AS success,</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>sum(</dt>
+<dd><dl class="first docutils">
+<dt>CASE</dt>
+<dd>WHEN rh.request_status::text = „ERROR“::text THEN 1
+ELSE 0</dd>
+</dl>
+<p class="last">END) AS error,</p>
+</dd>
+</dl>
+<p>count(*) AS total,
+rh.request_date</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>FROM request_history rh</dt>
+<dd>LEFT JOIN tour_operator ON rh.tour_operator_id = tour_operator.id</dd>
+</dl>
+</div></blockquote>
+<p class="last">GROUP BY tour_operator.id, rh.request_date;</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id15">
+<h2>Отчет «Количетво и объем туристическиъ поезжок между Китаем и Россией»<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данный отчет формируется на основе данных получаемых из СИС Ростуризм.</p>
+<p>Отчет формируется для выбранного периода времени. В отчет включаются регионы, количество путевок, количество туристорв вьехавших(выехавших) в Китай за данный период времени.</p>
+<p>В отчет включаются ЭП всех типов со статусом:</p>
+<ul class="simple">
+<li>CF – подтверждена;</li>
+<li>US – использована.</li>
+</ul>
+<p>В отчеты должны входить следующие колонки:</p>
+<ul class="simple">
+<li>Регион;</li>
+<li>Группа;</li>
+<li>Туристы.</li>
+</ul>
+<p>Система включает в отчет данные по вьехавшим(выехавшим из) в Россию туристам из(в) Китая. Данные берутся на основе информация СИС Ростуризм (сущность sis_rostourism_statistics). Последней строкой отчетов являются данные взятые из ИС ЭП (в колонке регион должно указываться «Данные ИС ЭП» в остальных колонках количество туристов и путевок за заданный период).</p>
+<p>Отчет собирается из куба vw_chinastatistic</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div><blockquote>
+<div><dl class="docutils">
+<dt>CASE sis_rostourism_statistics.group_type</dt>
+<dd>WHEN 1 THEN 1
+ELSE 0</dd>
+</dl>
+<p>END AS exit_tour,
+CASE sis_rostourism_statistics.group_type</p>
+<blockquote>
+<div>WHEN 2 THEN 1
+ELSE 0</div></blockquote>
+<p>END AS entry_tour,</p>
+</div></blockquote>
+<p>sis_rostourism_statistics.region_name AS region,
+sum(sis_rostourism_statistics.groups_count) AS groups,
+sum(sis_rostourism_statistics.members_count) AS tourists,
+sis_rostourism_statistics.date_from::date AS begin_period,
+sis_rostourism_statistics.date_to::date AS end_period</p>
+</div></blockquote>
+<p>FROM sis_rostourism_statistics</p>
+</div></blockquote>
+<p class="last">GROUP BY sis_rostourism_statistics.group_type, sis_rostourism_statistics.region_name, sis_rostourism_statistics.date_from, sis_rostourism_statistics.date_to</p>
+</dd>
+<dt>UNION</dt>
+<dd><dl class="first last docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>1 AS exit_tour,
+0 AS entry_tour,
+„ЭП Россия-Китай“::character varying AS region,
+count(v1.id) AS groups,
+count(vp1.id) AS tourists,
+v1.trip_start_date AS begin_period,
+v1.trip_end_date AS end_period</div></blockquote>
+<dl class="docutils">
+<dt>FROM vouchers v1</dt>
+<dd>LEFT JOIN voucher_person vp1 ON v1.id = vp1.id</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE v1.leaving_country_id = 116 AND v1.destination_country_id = 197 AND (v1.voucher_status_id = 2 OR v1.voucher_status_id = 5)
+GROUP BY v1.trip_start_date, v1.trip_end_date</p>
+</dd>
+</dl>
+</dd>
+<dt>UNION</dt>
+<dd><dl class="first last docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>0 AS exit_tour,
+1 AS entry_tour,
+„ЭП Китай-Россия“::character varying AS region,
+count(v2.id) AS groups,
+count(vp2.id) AS tourists,
+v2.trip_start_date AS begin_period,
+v2.trip_end_date AS end_period</div></blockquote>
+<dl class="docutils">
+<dt>FROM vouchers v2</dt>
+<dd>LEFT JOIN voucher_person vp2 ON v2.id = vp2.id</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE v2.leaving_country_id = 197 AND v2.destination_country_id = 116 AND (v2.voucher_status_id = 2 OR v2.voucher_status_id = 5)
+GROUP BY v2.trip_start_date, v2.trip_end_date;</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="id16">
+<h2>Отчет финансовой организации<a class="headerlink" href="#id16" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Отчет формируется для выбранной финансовой организации и для выбранного периода времени. В отчет включаются гарантии, срок действия которых входит в заданный период</p>
+<p>В отчет входят следующие колонки:</p>
+<ul class="simple">
+<li>Номер ТО;</li>
+<li>Наименование ТО;</li>
+<li>Дата начала действия ФО;</li>
+<li>Дата окончания действия ФО;</li>
+<li>Уровень ФО.</li>
+</ul>
+<p>Система включает в отчет все финансовые гарантии выданные данной организацией фин.гаранта за выбранный период времени.</p>
+<p>Отчет собирается из куба vw_finorgreport</p>
+<p>SQL запрос отчета</p>
+<dl class="docutils">
+<dt>CREATE OR REPLACE VIEW public.vw_finorgreport AS</dt>
+<dd><dl class="first last docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>financial_organization.title AS financial_organization,
+financial_organization.id AS financial_organization_id,
+tour_operator.registry_id AS number_to,
+tour_operator.abbreviated_name AS name_to,
+financial_security_info.amount AS financial_security_amount,
+financial_security_info.valid_from AS start_date,
+financial_security_info.valid_to AS end_date</div></blockquote>
+<dl class="docutils">
+<dt>FROM tour_operator</dt>
+<dd>RIGHT JOIN financial_security_info ON tour_operator.id = financial_security_info.tour_operator_id
+LEFT JOIN financial_organization ON financial_organization.id = financial_security_info.financial_organization_id</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE financial_security_info.financial_organization_id IS NOT NULL
+GROUP BY financial_organization.title, financial_organization.id, tour_operator.registry_id, tour_operator.abbreviated_name, financial_security_info.amount, financial_security_info.valid_from, financial_security_info.valid_to;</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="id17">
+<h2>Отчет по выявленным нарушениям<a class="headerlink" href="#id17" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Отчет формируется для выбранного периода времени и выбранного туроператора (турагента). В отчет включаются нарушения (информация о стране, регионе, количестве туристов, типе путевки, количестве нарушений) за данный период времени.</p>
+<p>В отчет входят следующие колонки:</p>
+<ul class="simple">
+<li>Страна – страна путешествия путевки, связанной с нарушением</li>
+<li>Тип путевки –тип путевки, связанной с нарушением</li>
+<li>Регион – регион путевки, связанной с нарушением</li>
+<li>Количество туристов связанных с нарушниями;</li>
+<li>Количество нарушений.</li>
+</ul>
+<p>Отчет собирается из куба vw_processing_violations</p>
+<p>SQL запрос</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>n.created_date::date AS createdate,
+count(n2.id) AS confirmed,
+count(n3.id) AS not_confirmed,
+count(n4.id) AS sent_violation,
+count(n5.id) AS measure_no_taken,
+count(n6.id) AS amountprocessed</div></blockquote>
+<dl class="docutils">
+<dt>FROM notice n</dt>
+<dd>LEFT JOIN notice n2 ON n.id = n2.id AND n2.created_date::date = n.created_date::date AND n2.processed IS NOT NULL AND n2.status = 1
+LEFT JOIN notice n3 ON n.id = n3.id AND n3.created_date::date = n.created_date::date AND n3.processed IS NOT NULL AND n3.status = 0
+LEFT JOIN notice n4 ON n.id = n4.id AND n4.created_date::date = n.created_date::date AND n4.processed IS NOT NULL AND n4.activity = 1
+LEFT JOIN notice n5 ON n.id = n5.id AND n5.created_date::date = n.created_date::date AND n5.processed IS NOT NULL AND n5.activity = 0
+LEFT JOIN notice n6 ON n.id = n6.id AND n6.created_date::date = n.created_date::date AND n6.processed = true</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE n.processed IS NOT NULL
+GROUP BY (n.created_date::date);</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id18">
+<h2>Отчет по обработке нарушений<a class="headerlink" href="#id18" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Отчет должен формироваться для выбранного периода времени. В отчет должна включаться информация о обработке нарушений (информация о подтверждении, не подтверждении, отправлено уведомление, меры не приняты, обработано) за данный период времени.</p>
+<p>В отчет входят следующие колонки:</p>
+<ul class="simple">
+<li>Дата;</li>
+<li>Подтвержденных – подтвержденных нарушений за данный день;</li>
+<li>Не подтвержденных –  не подтвержденных нарушений за данный день;</li>
+<li>Отправлено уведомлений – выполнено действий за данный день;</li>
+<li>Мер не принято – выполнено действий за данный день;</li>
+<li>Обработанных – обработанных нарушений за данный день.</li>
+</ul>
+<p>Отчет собирается из куба vw_processing_violations</p>
+<p>SQL запрос</p>
+<dl class="docutils">
+<dt>SELECT row_number() OVER () AS id,</dt>
+<dd><blockquote class="first">
+<div><blockquote>
+<div>n.created_date::date AS createdate,
+count(n2.id) AS confirmed,
+count(n3.id) AS not_confirmed,
+count(n4.id) AS sent_violation,
+count(n5.id) AS measure_no_taken,
+count(n6.id) AS amountprocessed</div></blockquote>
+<dl class="docutils">
+<dt>FROM notice n</dt>
+<dd>LEFT JOIN notice n2 ON n.id = n2.id AND n2.created_date::date = n.created_date::date AND n2.processed IS NOT NULL AND n2.status = 1
+LEFT JOIN notice n3 ON n.id = n3.id AND n3.created_date::date = n.created_date::date AND n3.processed IS NOT NULL AND n3.status = 0
+LEFT JOIN notice n4 ON n.id = n4.id AND n4.created_date::date = n.created_date::date AND n4.processed IS NOT NULL AND n4.activity = 1
+LEFT JOIN notice n5 ON n.id = n5.id AND n5.created_date::date = n.created_date::date AND n5.processed IS NOT NULL AND n5.activity = 0
+LEFT JOIN notice n6 ON n.id = n6.id AND n6.created_date::date = n.created_date::date AND n6.processed = true</dd>
+</dl>
+</div></blockquote>
+<p class="last">WHERE n.processed IS NOT NULL
+GROUP BY (n.created_date::date);</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="POTOD.html" class="btn btn-neutral float-right" title="Подсистема оперативной транзакционной обработки данных" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="PODIR.html" class="btn btn-neutral" title="Подсистема информирования и доступа к информационным ресурсам" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, dmitrii.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'ru',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

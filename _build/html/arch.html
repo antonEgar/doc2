@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Функциональная архитектура системы &mdash; Документация elvoucher 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Подсистема оперативного контроля" href="POK.html" />
+    <link rel="prev" title="Программное обеспечение системы" href="program.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> elvoucher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program.html">Программное обеспечение системы</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Функциональная архитектура системы</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Подсистемы и их описание</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="POK.html">Подсистема оперативного контроля</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POFO.html">Подсистема Формирования отчетов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POSHD.html">Подсистема ведения ПОСХД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PONSI.html">Подсистема ведения НСИ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mail.html">Почтовое взаимодействие с внешними системами</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UC.html">Обмен данными с удостоверяющим центром</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">elvoucher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Функциональная архитектура системы</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/arch.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Функциональная архитектура системы<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>В настоящем разделе приведено описание проектных решений по Системе третьей очереди и её частям.
+Функциональная структура описывается в соответствии со следующим уровнем детализации:</p>
+<ul class="simple">
+<li>Система делится на взаимосвязанные логические подсистемы;</li>
+<li>Подсистема - совокупность взаимосвязанных элементов Системы, выполняющая относительно самостоятельные функции, связанные с достижением целей Системы;</li>
+<li>в состав Подсистемы входит набор элементов-функциональных модулей, которые поддерживают различные бизнес-процессы и интегрированы между собой в масштабе реального времени;</li>
+<li>минимальными сущностями, которые описывают в рамках настоящего предложения логической структуры ИС&nbsp;ЭП являются функции, определяющие основные операции: ввода, хранения, передачи, обработки и выдачи массивов информации, входящие в состав модулей.</li>
+</ul>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="./pic1.jpg"><img alt="Функциоанальная архитектура системы" src="./pic1.jpg" /></a>
+<p class="caption"><span class="caption-text">Функциоанальная архитектура системы</span></p>
+</div>
+<div class="section" id="id2">
+<h2>Подсистемы и их описание<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p><strong>Подсистема сбора и хранения данных</strong> - Подсистема предназначена:</p>
+<ul class="simple">
+<li>для наполнения актуальной информацией Хранилища данных от подсистемы оперативной транзакционной обработки данных о проданных туроператорами туристских продуктах, данных о финансовых гарантиях туроператоров и других данных;</li>
+<li>для хранения непротиворечивой, очищенной юридически значимой информации, необходимой для проведения оперативных проверок деятельности участников туристского рынка, формирования аналитических отчетов, интеллектуального анализа данных и прогнозирования развития туристского рынка.</li>
+</ul>
+<p><strong>Подсистема формирования отчетов</strong> - Подсистема предназначена для хранения и аналитической обработки данных. Обеспечивает информационную поддержку деятельности пользователей Системы, формирование и визуализацию представления информации в табличном и графическом видах, выявление практически полезных тенденций в развитии туристской деятельности, необходимых для принятия решений.</p>
+<p><strong>Подсистема оперативного контроля</strong> - Подсистема предназначена для оперативного выявления признаков нарушений в деятельности участников туристского рынка, их учета и отработки в соответствии с действующими регламентами и правилами.</p>
+<p><strong>Подсистема ведения НСИ</strong> - Подсистема предназначена для обработки, консолидации, а также интеграции НСИ от различных информационных систем – источников информации.</p>
+<p><strong>Подсистема информирования и доступа к информационным ресурсам</strong> - Подсистема предназначена для регламентированной публикации информационных ресурсов и предоставления сервисов по работе с ними участникам туристской деятельности (сотрудникам Ростуризма и туроператоров).</p>
+<p><strong>Подсистема обеспечения информационной безопасности</strong> - Подсистема предназначена для обеспечения комплексной защиты информационных ресурсов и средств Системы от актуальных угроз информационной безопасности, обеспечения и поддержания необходимых свойств безопасности информации, обрабатываемой Системой.</p>
+<p><strong>Подсистема администрирования</strong> - Подсистема администрирования предназначена для решения следующих задач:</p>
+<ul class="simple">
+<li>управление реестром источников и потребителей информации;</li>
+<li>обеспечение регистрации пользователей и управления правами доступа;</li>
+<li>управление централизованным журналом информационного обмена;</li>
+<li>мониторинга функционирования специализированного ПО.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="POK.html" class="btn btn-neutral float-right" title="Подсистема оперативного контроля" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="program.html" class="btn btn-neutral" title="Программное обеспечение системы" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, dmitrii.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'ru',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

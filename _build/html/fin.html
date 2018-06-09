@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Обмен данными с АИС Туризм &mdash; Документация elvoucher 1</title>
+  <title>Обмен данными с информационными системами банков и страховых компаний &mdash; Документация elvoucher 1</title>
   
 
   
@@ -28,9 +28,7 @@
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
-    <link rel="search" title="Поиск" href="search.html" />
-    <link rel="next" title="Обмен данными с СИС Ростуризм" href="SISROSTOUR.html" />
-    <link rel="prev" title="Почтовое взаимодействие с внешними системами" href="mail.html" /> 
+    <link rel="search" title="Поиск" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -79,7 +77,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+              <p class="caption"><span class="caption-text">Содержание:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
 <li class="toctree-l1"><a class="reference internal" href="program.html">Программное обеспечение системы</a></li>
@@ -88,23 +86,15 @@
 <li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="POFO.html">Подсистема Формирования отчетов</a></li>
 <li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
-<li class="toctree-l1"><a class="reference internal" href="POSHD.html">Подсистема ведения ПОСХД</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PONSI.html">Подсистема ведения НСИ</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
-<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
 <li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mail.html">Почтовое взаимодействие с внешними системами</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UC.html">Обмен данными с удостоверяющим центром</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
-<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с информационными системами банков и страховых компаний</a></li>
 </ul>
 
             
@@ -150,13 +140,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Обмен данными с АИС Туризм</li>
+      <li>Обмен данными с информационными системами банков и страховых компаний</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/AISTOUR.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/fin.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -170,14 +160,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>Обмен данными с АИС Туризм<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Взаимодействие ИС&nbsp;ЭП с АИС&nbsp;Туризм реализовано посредством размещения ссылок для переадресации пользователей ИС&nbsp;ЭП на национальный туристический портал <a class="reference external" href="https://russia.travel/">https://russia.travel/</a>, входящий в состав АИС&nbsp;Туризм.</p>
-<p>Перечень гиперссылок на открытые данные, используемых на главной странице ИС&nbsp;ЭП:</p>
-<ul class="simple">
-<li>Хакатон: Полный список кредитных организаций. Набор данных содержит информацию о кредитных организациях (идентификационный номер 7708550300‑listofcreditinstitutions, гиперссылка (URL) на открытые данные <a class="reference external" href="http://opendata.russiatourism.ru/7708550300-listofcreditinstitutions">http://opendata.russiatourism.ru/7708550300-listofcreditinstitutions</a> );</li>
-<li>Хакатон: Единый федеральный реестр туроператоров (Общий). Набор данных содержит информацию о юридических лицах, сведения о которых внесены в Единый федеральный реестр туроператоров (идентификационный номер 7708550300-efrtall, гиперссылка (URL) на открытые данные <a class="reference external" href="http://opendata.russiatourism.ru/7708550300-efrtall">http://opendata.russiatourism.ru/7708550300-efrtall</a> );</li>
-<li>Перечень информационных систем Ростуризма Перечень содержит сведения об Федеральных государственных информационных системах Ростуризма (идентификационный номер 7708550300-informationsystems, гиперссылка (URL) на открытые данные <a class="reference external" href="http://opendata.russiatourism.ru/7708550300-informationsystems">http://opendata.russiatourism.ru/7708550300-informationsystems</a> ).</li>
-</ul>
+<h1>Обмен данными с информационными системами банков и страховых компаний<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Ниже приведена ссылка для скачивания регламента взаимодействия ИС ЭП с Информационными системами банков и страховых компаний.</p>
+<p><a class="reference external" href="./fin.docx">Регламент взаимодействия с Информационными системами банков и страховых компаний</a>.</p>
 </div>
 
 
@@ -185,15 +170,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="SISROSTOUR.html" class="btn btn-neutral float-right" title="Обмен данными с СИС Ростуризм" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="mail.html" class="btn btn-neutral" title="Почтовое взаимодействие с внешними системами" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

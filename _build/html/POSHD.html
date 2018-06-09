@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Подсистема ведения ПОСХД &mdash; Документация elvoucher 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Подсистема ведения НСИ" href="PONSI.html" />
+    <link rel="prev" title="Подсистема оперативной транзакционной обработки данных" href="POTOD.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> elvoucher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program.html">Программное обеспечение системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arch.html">Функциональная архитектура системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POK.html">Подсистема оперативного контроля</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POFO.html">Подсистема Формирования отчетов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Подсистема ведения ПОСХД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PONSI.html">Подсистема ведения НСИ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mail.html">Почтовое взаимодействие с внешними системами</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UC.html">Обмен данными с удостоверяющим центром</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">elvoucher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Подсистема ведения ПОСХД</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/POSHD.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Подсистема ведения ПОСХД<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Подсистема хранения данных предназначена для наполнения актуальной информацией Хранилища данных от подсистемы оперативной транзакционной обработки данных о проданных туроператорами туристских продуктах, данных о финансовых гарантиях туроператоров и других данных.</p>
+<p>ПОСХД представляет собой логически целостное хранилище полной непротиворечивой информации, необходимой для обеспечения хранения данных других подсистем, создаваемых в рамках ИС&nbsp;ЭП третьей очереди, а также формирования отчетов, обеспечения доступа к информационным ресурсам Системы.</p>
+<p>Подсистема предназначена:</p>
+<ul class="simple">
+<li>для наполнения актуальной информацией Хранилища данных от подсистемы оперативной транзакционной обработки данных о проданных туроператорами туристских продуктах, данных о финансовых гарантиях туроператоров и других данных;</li>
+<li>для хранения непротиворечивой, очищенной юридически значимой информации, необходимой для проведения оперативных проверок деятельности участников туристского рынка, формирования аналитических отчетов, интеллектуального анализа данных и прогнозирования развития туристского рынка.</li>
+</ul>
+<p>В подсистеме предусмотрены следующие функциональные возможности:</p>
+<ul class="simple">
+<li>получение данных из подсистемы оперативной транзакционной обработки данных;</li>
+<li>трансформация (преобразование) данных в форматы долговременного хранения;</li>
+<li>передача данных в СУБД в требуемом формате;</li>
+<li>обеспечение возможности настройки правил взаимодействия с подсистемой оперативной транзакционной обработки данных;</li>
+<li>передача данных подсистемы оперативного контроля в СУБД;</li>
+<li>протоколирование результатов сбора, обработки и загрузки данных в СУБД.</li>
+</ul>
+<p>Подсистема реализует выполнение всех функций платформенным программным обеспечением PostgreSQL. Подсистема полностью реализуется программными модулями разрабатываемыми на языке программирования SQL и выполняются PostgreSQL.</p>
+<p>При передаче данных в СУБД осуществляется кодирования данных элементов справочников.</p>
+<ul class="simple">
+<li>Сферы тур.деятельности - Кодом должно являться название направления туризма на английском языке.</li>
+<li>Виды туристических услуг - Код записи должен состоять из трех символов. Код должен иметь вид XXX. Вместо XXX должны передаваться числовые значения. Кодирование элементов должно начинаться со значения 001. При добавлении элементов, числовое значение должно последовательно увеличиваться на единицу. Код каждей записи должен быть уникальным.</li>
+<li>Типы путевок - Код записи должен состоять из трех символов. Код должен иметь вид XXX. Вместо XXX должны передаваться числовые значения. Кодирование элементов должно начинаться со значения 001. При добавлении элементов, числовое значение должно последовательно увеличиваться на единицу. Код каждей записи должен быть уникальным</li>
+<li>Статусы путевок - Код записи должен состоять из трех символов. Код должен иметь вид XXX. Вместо XXX должны передаваться числовые значения. Кодирование элементов должно начинаться со значения 001. При добавлении элементов, числовое значение должно последовательно увеличиваться на единицу. Код каждей записи должен быть уникальным</li>
+<li>Регионы мира - Кодом считается поле «Код UN M.49». В данное поле должно передаваться значение кодов UN M.9.</li>
+<li>Подрегионы мира - Код записидолжен содержать два знака и иметь вид ХХ. Первым знаком должен передаваться номер региона:</li>
+</ul>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Европа</li>
+<li>Азия</li>
+<li>Африка</li>
+<li>Америка</li>
+<li>Океания</li>
+<li>Антарктида</li>
+</ol>
+</div></blockquote>
+<p>Вторым знаком должна передоваться буква латинсокго алфавита. Значения от A до Z. Каждый код записи должен быть уникальным.</p>
+<ul class="simple">
+<li>Субъекты РФ - Кодом записи считается код субъекта РФ согласно конституции РФ.</li>
+<li>Страны - Кодом записи считать поле «Цифровой код». В поле цифровой код неоходимо передавать код страны из ОКСМ. Каждый код записи должен быть уникальным.</li>
+<li>Города - В поле «Код» должно дублироваться значение поля «Код IATA». В случае если поле «Код IATA» - пустое, в поле «Код» должно вноситься четырехзначное значение.  Код должен иметь вид XXXX. Вместо XXXX должны передаваться буквенно-числовые значения. Кодирование элементов должно начинаться со значения 0001. При добавлении элементов, числовое значение должно последовательно увеличиваться на единицу, после значения 9 должны использоваться буквенные значения от A до Z латинского алфавита. После значения Z, на одно значение должен увиличиваться следующий разряд кода, и нумерается предыдущего разряда должно снова начинаться с значения 0. Код каждей записи должен быть уникальным</li>
+<li>Аэропорты - В поле «Код» должно дублироваться значение поля «Код IATA». В случае если поле «Код IATA» - пустое, в поле «Код» должно доблироваться значение поля «Код ICAO». В случае если поля «Код ICAO» и код «IATA» пустые, в поле «Код» должно дублироваться значение поля код «РФ».</li>
+<li>Ж/Д станции - Кодом записи считается код Экспресс или код ЕСР передаеваемый из ЕГИС ОТБ.</li>
+<li>Типы перевозчиков - Код записи должен состоять из трех символов. Код должен иметь вид XXX. Вместо XXX должны передаваться числовые значения. Кодирование элементов должно начинаться со значения 001. При добавлении элементов, числовое значение должно последовательно увеличиваться на единицу. Код каждей записи должен быть уникальным</li>
+<li>Перевозчики - В поле «Код» должно дублироваться значение поля «Код IATA». В случае если поле «Код IATA» - пустое, в поле «Код» должно доблироваться значение поля «Код ICAO». В случае если поля «Код ICAO» и код «IATA» пустые, в поле «Код» должно дублироваться значение поля код «РФ».</li>
+<li>Ж/Д перевозчики - В поле «Код» должно вноситься четырехзначное значение.  Код должен иметь вид XXXX. Вместо XXXX должны передаваться буквенно-числовые значения. Кодирование элементов должно начинаться со значения 0001. При добавлении элементов, числовое значение должно последовательно увеличиваться на единицу, после значения 9 должны использоваться буквенные значения от A до Z латинского алфавита. После значения Z, на одно значение должен увиличиваться следующий разряд кода, и нумерается предыдущего разряда должно снова начинаться с значения 0. Код каждей записи должен быть уникальным</li>
+<li>Виды документа, удостоверяющего личность - Код записи должен состоять из трех символов. Код должен иметь вид XXX. Вместо XXX должны передаваться числовые значения. Кодирование элементов должно начинаться со значения 001. При добавлении элементов, числовое значение должно последовательно увеличиваться на единицу. Код каждей записи должен быть уникальным</li>
+<li>Типы способов связи - Код записи должен состоять из трех символов. Код должен иметь вид XXX. Вместо XXX должны передаваться числовые значения. Кодирование элементов должно начинаться со значения 001. При добавлении элементов, числовое значение должно последовательно увеличиваться на единицу. Код каждей записи должен быть уникальным</li>
+<li>Валюты - В поле код неоходимо передавать буквенный код валюты из ОКВ. Каждый код записи должен быть уникальным.</li>
+<li>Регионы РФ - кодом является цифровой код субъекта РФ согласно конституции.</li>
+</ul>
+<p>По ссылке приведенной ниже вы можете скачать каталог базы данных ИС ЭП, физическую схему базы данных ИС ЭП в формате .pdf и .dmd.</p>
+<p><a class="reference external" href="./katalogdb.docx">Каталог базы данных</a>.</p>
+<p><a class="reference external" href="./Relational_EP.pdf">Физическая схема базы данных.pdf</a>.</p>
+<p><a class="reference external" href="./voucher.dmd">Физическая схема базы данных.dmd</a>.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PONSI.html" class="btn btn-neutral float-right" title="Подсистема ведения НСИ" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="POTOD.html" class="btn btn-neutral" title="Подсистема оперативной транзакционной обработки данных" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, dmitrii.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'ru',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

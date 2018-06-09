@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Программное обеспечение системы &mdash; Документация elvoucher 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Функциональная архитектура системы" href="arch.html" />
+    <link rel="prev" title="Основная информация о системе" href="main.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> elvoucher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Программное обеспечение системы</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Балансировка нагрузки в ИС&nbsp;ЭП</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Операционная система</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">Сервер приложений</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">СУБД ИС ЭП</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Инструкция по развертыванию системы</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arch.html">Функциональная архитектура системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POK.html">Подсистема оперативного контроля</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POFO.html">Подсистема Формирования отчетов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POSHD.html">Подсистема ведения ПОСХД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PONSI.html">Подсистема ведения НСИ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mail.html">Почтовое взаимодействие с внешними системами</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UC.html">Обмен данными с удостоверяющим центром</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">elvoucher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Программное обеспечение системы</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/program.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Программное обеспечение системы<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>При реализации проекта ИС ЭП 3-я очередь использовано ПО, структура которого представлена на рисунке.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="./struc1.jpg"><img alt="Структура программного обеспечения ИС&nbsp;ЭП третьей очереди" src="./struc1.jpg" /></a>
+<p class="caption"><span class="caption-text">Структура программного обеспечения ИС&nbsp;ЭП третьей очереди</span></p>
+</div>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="./struc2.png"><img alt="Цветовое обозначение функциональных подсистем ИС ЭП" src="./struc2.png" /></a>
+<p class="caption"><span class="caption-text">Цветовое обозначение функциональных подсистем ИС ЭП</span></p>
+</div>
+<p>В состав программного обеспечения ИС&nbsp;ЭП входят:</p>
+<ul class="simple">
+<li>в качестве операционной системы используется CentOS 7;</li>
+<li>в качестве СУБД используется PostgresSQL 9.x.;</li>
+<li>в качестве веб-сервера и сервера приложений используется Apache Tomcat версия 9.0;</li>
+<li>веб-приложение публикации информационных ресурсов, разработанное на языке Java. Предоставляет графический инструмент для создания публикуемых ресурсов, создание соответствующих разделов и предоставляет графический пользовательский интерфейс для размещения информационных ресурсов в соответствующие разделы портала. Соответствующие инструменты автоматически оптимизируют внешний вид страницы к дизайну всего портала;</li>
+<li>веб‑приложение аутентификации и авторизации пользователей. Передает данные пользователей (логин, пароль) в epCoreApp, которое реализовано на языке Java и возвращает пользователю результат аутентификации/авторизации;</li>
+<li>веб‑приложение предоставления графического интерфейса пользователя, разработанное на языке Java с использованием фреймворка Bootstrap, реализует пользовательский интерфейс в виде АРМ в зависимости от роли пользователя в Системе.</li>
+</ul>
+<p>ИС&nbsp;ЭП формирует следующие АРМ:
+* АРМ&nbsp;«Администратор Ростуризма»;
+* АРМ&nbsp;«Администратор»;
+* АРМ&nbsp;«Сотрудник Ростуризма»;
+* АРМ&nbsp;«Сотрудник»;
+* АРМ «Финансовый гарант».</p>
+<p>ИС&nbsp;ЭП предоставляет набор прав доступа к ресурсам ИС и действий над ними (просмотр, редактирование и т.д.). Позволяет создать другие АРМ с предоставлением (назначением) соответствующих прав.</p>
+<p>Программный модуль аутентификации и авторизации пользователей – часть epCoreApp.  Позволяет обеспечить доступ пользователей к информационным ресурсам Системы. Таким образом, происходит разграничение доступа к ресурсам Системы. В рамках аутентификация проверяются введенные пользовательские данные (логин, пароль) на предмет их соответствия данным, содержащимся в БД ИС&nbsp;ЭП.
+Данные передаются по защищенным каналам связи. В случае успешной аутентификации, дальнейшая обработка сессии пользователя передается в авторизацию. Процедура авторизации предполагает проверку прав пользователя на доступ к запрошенному ресурсу или выполнение какой-либо операции ИС&nbsp;ЭП. Определенные функциональные возможности ИС&nbsp;ЭП предоставляются только пользователям, прошедшим аутентификацию и авторизацию при условии явного разрешения на доступ к конкретному ресурсу в профиле пользователя; Позволяет зарегистрировать нового пользователя. Также возможна авторегистрация туроператора в ИС, при условии, что он присутствует в ЕФРТ.</p>
+<p>Программный модуль управления НСИ реализует логику управления НСИ       и предоставляет доступ к различным справочникам.</p>
+<p>Программный модуль формирования электронной путевки - часть epCoreApp. Модуль получает запрос на формирование ЭП и формирует уникальный номер ЭП. Результат сохраняется в СУБД.</p>
+<p>Программный модуль актуализации данных осуществляет чтение реестров, поиск и предоставляет для просмотра пользователю ИС, согласно имеющимся правам.</p>
+<p>Программный модуль контроля данных предназначен для контроля непротиворечивости форматов, принимаемых данных с целью их дальнейшей обработки. В случае различия форматов полей данных выдается соответствующая ошибка. Также определяет, заполнены ли все соответствующие поля в получаемых данных. В случае пустых полей, обязательных для заполнения (например, страна прилета, номер документа, фамилия и имя туриста и др.), внешней системе отправляется соответствующая ошибка.
+Программный модуль отчетности формирует запросы к ПОСХД и визуализирует результаты исполнения запросов.</p>
+<p>Описание программного обеспечения основного приложения системы (Core application) вы можете скачать по ссылке:</p>
+<p><a class="reference external" href="./appcore.docx">Описание Core application</a>.</p>
+<p>Описание программного обеспечения транспортного приложения системы (Transport application) вы можете скачать по ссылке:</p>
+<p><a class="reference external" href="./apptransport.docx">Описание Transport application</a>.</p>
+<div class="section" id="id2">
+<h2>Балансировка нагрузки в ИС&nbsp;ЭП<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В целевой ИС&nbsp;ЭП предусмотрена балансировки нагрузки на прикладном уровне, для чего применяется балансировщик nginx, который работает в режиме «умного» прокси-сервера. Он анализирует клиентские запросы и перенаправляет их на разные серверы в зависимости от загруженности сервера.</p>
+</div>
+<div class="section" id="id3">
+<h2>Операционная система<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Операционная система — комплекс взаимосвязанных программ, предназначенных для управления ресурсами вычислительного устройства и организации взаимодействия с пользователем.
+В функции операционной системы входят:</p>
+<ol class="arabic simple">
+<li>основные функции:</li>
+</ol>
+<ul class="simple">
+<li>исполнение запросов программ (ввод и вывод данных, запуск и остановка других программ, выделение и освобождение дополнительной памяти и др.);</li>
+<li>загрузка программ в оперативную память и их выполнение;</li>
+<li>стандартизованный доступ к периферийным устройствам (устройства ввода-вывода);</li>
+<li>управление оперативной памятью (распределение между процессами, организация виртуальной памяти);</li>
+<li>управление доступом к данным на энергонезависимых носителях (таких как жёсткий диск, оптические диски и др.), организованным в той или иной файловой системе;</li>
+<li>обеспечение пользовательского интерфейса;</li>
+<li>сохранение информации об ошибках системы.</li>
+</ul>
+<ol class="arabic simple" start="2">
+<li>дополнительные функции:</li>
+</ol>
+<ul class="simple">
+<li>параллельное или псевдопараллельное выполнение задач (многозадачность);</li>
+<li>эффективное распределение ресурсов вычислительной системы между процессами;</li>
+<li>разграничение доступа различных процессов к ресурсам;</li>
+<li>организация надёжных вычислений (невозможности одного вычислительного процесса намеренно или по ошибке повлиять на вычисления в другом процессе), основана на разграничении доступа к ресурсам;</li>
+</ul>
+<p>взаимодействие между процессами: обмен данными, взаимная синхронизация;</p>
+<ul class="simple">
+<li>защита самой системы, а также пользовательских данных и программ от действий пользователей (злонамеренных или по незнанию) или приложений;</li>
+<li>многопользовательский режим работы и разграничение прав доступа.</li>
+</ul>
+<p>Для работы ИС&nbsp;ЭП применяется Unix подобная операционная система CentOS 7.x.</p>
+<p>Unix– это семейство переносимых, многозадачных и многопользовательских операционных систем. Каждый из пользователей системы может выполнять множество различных вычислительных процессов, которые будут использовать ресурсы именно этого компьютера. Ядро системы написано таким образом, что его легко можно приспособить практически под любой микропроцессор, а не только под популярное семейство i-386 (i-686).</p>
+</div>
+<div class="section" id="id4">
+<h2>Сервер приложений<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Сервер приложений (англ. application server) — программная платформа, предназначенная для эффективного исполнения процедур (программ, механических операций, скриптов), которые поддерживают построение приложений. Сервер приложений действует как набор компонентов, доступных разработчику программного обеспечения через API (Интерфейс прикладного программирования), который определен самой платформой.</p>
+<p>Современные серверы приложений нацелены на то, чтобы выполнять такие сервисы, как кластеризация, отказоустойчивость и балансировка нагрузки, позволяя таким образом разработчикам сфокусироваться только на реализации бизнес-логики.</p>
+<p>Для реализации контейнера сервлетов в ИС&nbsp;ЭП используется Apache TomCat.</p>
+</div>
+<div class="section" id="id5">
+<h2>СУБД ИС ЭП<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Система управления базами данных (СУБД) — совокупность программных и лингвистических средств общего или специального назначения, обеспечивающих управление созданием и использованием баз данных.</p>
+<p>В качестве СУБД в ИС&nbsp;ЭП используется Postgresql 9.6. Предложенная версия СУБД расширяет функциональные возможности ИС ЭП и позволяет наряду с коммерческими СУБД (Oracle) использовать свободно распространяемые версии СУБД. Это позволяет существенно снизить расходы на эксплуатацию ИС ЭП за счет исключения ежегодных платежей за техническую поддержку СУБД.</p>
+</div>
+<div class="section" id="id6">
+<h2>Инструкция по развертыванию системы<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Инструкцию по развертыванию системы вы можете скачать по ссылке, приведенной ниже:</p>
+<p><a class="reference external" href="./nkppo.docx">Инструкция по развертыванию системы</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arch.html" class="btn btn-neutral float-right" title="Функциональная архитектура системы" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="main.html" class="btn btn-neutral" title="Основная информация о системе" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, dmitrii.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'ru',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

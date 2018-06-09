@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Почтовое взаимодействие с внешними системами &mdash; Документация elvoucher 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Обмен данными с АИС Туризм" href="AISTOUR.html" />
+    <link rel="prev" title="Обмен данными с ЕФРТ" href="EFRT.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> elvoucher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program.html">Программное обеспечение системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arch.html">Функциональная архитектура системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POK.html">Подсистема оперативного контроля</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POFO.html">Подсистема Формирования отчетов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POSHD.html">Подсистема ведения ПОСХД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PONSI.html">Подсистема ведения НСИ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Почтовое взаимодействие с внешними системами</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UC.html">Обмен данными с удостоверяющим центром</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">elvoucher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Почтовое взаимодействие с внешними системами</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/mail.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Почтовое взаимодействие с внешними системами<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">Набор команд для взаимодействия с почтовой системой Заказчика представлен</span><a class="headerlink" href="#id2" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Команда</th>
+<th class="head">Обязательность</th>
+<th class="head">Описание</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>HELO</td>
+<td>Обязательна</td>
+<td>Идентифицирует модуль-передатчик для
+модуля-приемника (hello)</td>
+</tr>
+<tr class="row-odd"><td>MAIL</td>
+<td>Обязательна</td>
+<td>Начинает почтовую транзакцию, которая
+завершается передачей данных в один или
+несколько почтовых ящиков (mail).</td>
+</tr>
+<tr class="row-even"><td>RCPT</td>
+<td>Обязательна</td>
+<td>Идентифицирует получателя почтового
+сообщения (recipient)</td>
+</tr>
+<tr class="row-odd"><td>DATA</td>
+<td>Не обязательна</td>
+<td>Строки, следующие за этой командой,
+рассматриваются получателем как данные
+почтового сообщения. В случае SMTP,
+почтовое сообщение заканчивается
+комбинацией символов: CRLF-точка-CRLF</td>
+</tr>
+<tr class="row-even"><td>RSET</td>
+<td>Не обязательна</td>
+<td>Прерывает текущую почтовую транзакцию</td>
+</tr>
+<tr class="row-odd"><td>NOOP</td>
+<td>Не обязательна</td>
+<td>Требует от получателя не предпринимать
+никаких действий, а только выдать
+ответ ОК. Используется главным образом для
+тестирования.(No operation)</td>
+</tr>
+<tr class="row-even"><td>QUIT</td>
+<td>Не обязательна</td>
+<td>Требует выдать ответ ОК и закрыть текущее
+соединение</td>
+</tr>
+<tr class="row-odd"><td>VRFY</td>
+<td>Не обязательна</td>
+<td>Требует от приемника подтвердить, что ее
+аргумент является действительным именем
+пользователя.</td>
+</tr>
+<tr class="row-even"><td>SEND</td>
+<td>Не обязательна</td>
+<td>Начинает почтовую транзакцию, доставляющую
+данные на один или несколько терминалов
+(а не в почтовый ящик)</td>
+</tr>
+<tr class="row-odd"><td>SOML</td>
+<td>Не обязательна</td>
+<td>Начинает транзакцию MAIL или SEND,
+доставляющую данные на один или несколько
+терминалов или в почтовые ящики</td>
+</tr>
+<tr class="row-even"><td>SAML</td>
+<td>Не обязательна</td>
+<td>Начинает транзакцию MAIL и SEND,
+доставляющие данные на один или несколько
+терминалов и в почтовые ящики</td>
+</tr>
+<tr class="row-odd"><td>EXPN</td>
+<td>Не обязательна</td>
+<td>Команда SMTP-приемнику подтвердить,
+действительно ли аргумент является адресом
+почтовой рассылки и если да, вернуть адрес
+получателя сообщения (expand)</td>
+</tr>
+<tr class="row-even"><td>HELP</td>
+<td>Не обязательна</td>
+<td>Команда SMTP-приемнику вернуть
+сообщение-справку о его командах</td>
+</tr>
+<tr class="row-odd"><td>TURN</td>
+<td>Не обязательна</td>
+<td>Команда SMTP-приемнику либо сказать ОК и
+поменяться ролями, то есть стать STMP-
+передатчиком, либо послать сообщение-отказ
+и остаться в роли SMTP-приемника</td>
+</tr>
+</tbody>
+</table>
+<p>Согласно протоколу SMTP, сервер передачи электронных сообщений отвечает на каждую команду.</p>
+<table border="1" class="docutils" id="id3">
+<caption><span class="caption-text">Состав данных элемента Е12 ЕФРТ (информация о финансовой гарантии)</span><a class="headerlink" href="#id3" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col width="28%" />
+<col width="72%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Код</th>
+<th class="head">Значение</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>211</td>
+<td>Ответ о состоянии системы или помощь</td>
+</tr>
+<tr class="row-odd"><td>214</td>
+<td>Сообщение-подсказка (помощь)</td>
+</tr>
+<tr class="row-even"><td>220</td>
+<td>&lt;имя_домена&gt; служба готова к работе</td>
+</tr>
+<tr class="row-odd"><td>221</td>
+<td>&lt;имя_домена&gt; служба закрывает канал связи</td>
+</tr>
+<tr class="row-even"><td>250</td>
+<td>Запрошенное действие почтовой
+транзакции успешно завершилось</td>
+</tr>
+<tr class="row-odd"><td>251</td>
+<td>Данный адресат не является местным;
+сообщение будет передано по маршруту
+&lt;forward-path&gt;</td>
+</tr>
+<tr class="row-even"><td>354</td>
+<td>Начинай передачу сообщения. Сообщение
+заканчивается комбинацией CRLF-точка-CRLF</td>
+</tr>
+<tr class="row-odd"><td>421</td>
+<td>&lt;имя_домена&gt; служба недоступна;
+соединение закрывается</td>
+</tr>
+<tr class="row-even"><td>450</td>
+<td>Запрошенная команда почтовой транзакции
+не выполнена, так как почтовый
+ящик недоступен</td>
+</tr>
+<tr class="row-odd"><td>451</td>
+<td>Запрошенная команда не выполнена;
+произошла локальная ошибка при
+обработке сообщения</td>
+</tr>
+<tr class="row-even"><td>452</td>
+<td>Запрошенная команда не выполнена;
+системе не хватило ресурсов</td>
+</tr>
+<tr class="row-odd"><td>500</td>
+<td>Синтаксическая ошибка в тексте команды;
+команда не опознана</td>
+</tr>
+<tr class="row-even"><td>501</td>
+<td>Синтаксическая ошибка в аргументах
+или параметрах команды</td>
+</tr>
+<tr class="row-odd"><td>502</td>
+<td>Данная команда не реализована</td>
+</tr>
+<tr class="row-even"><td>503</td>
+<td>Неверная последовательность команд</td>
+</tr>
+<tr class="row-odd"><td>504</td>
+<td>У данной команды не может быть аргументов</td>
+</tr>
+<tr class="row-even"><td>550</td>
+<td>Запрошенная команда не выполнена,
+так как почтовый ящик недоступен</td>
+</tr>
+<tr class="row-odd"><td>551</td>
+<td>Данный адресат не является местным;
+попробуйте передать сообщение по маршруту
+&lt;forward-path&gt;</td>
+</tr>
+<tr class="row-even"><td>552</td>
+<td>Запрошенная команда почтовой транзакции
+прервана; дисковое пространство,
+доступное системе, переполнилось</td>
+</tr>
+<tr class="row-odd"><td>553</td>
+<td>Запрошенная команда не выполнена;
+указано недопустимое имя почтового ящика</td>
+</tr>
+<tr class="row-even"><td>554</td>
+<td>Транзакция не выполнена</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="AISTOUR.html" class="btn btn-neutral float-right" title="Обмен данными с АИС Туризм" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="EFRT.html" class="btn btn-neutral" title="Обмен данными с ЕФРТ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, dmitrii.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'ru',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

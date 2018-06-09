@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Обмен данными с удостоверяющим центром &mdash; Документация elvoucher 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Обмен данными с ЕСИА" href="ESIA.html" />
+    <link rel="prev" title="Обмен данными с СИС Ростуризм" href="SISROSTOUR.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> elvoucher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program.html">Программное обеспечение системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arch.html">Функциональная архитектура системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POK.html">Подсистема оперативного контроля</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POFO.html">Подсистема Формирования отчетов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POSHD.html">Подсистема ведения ПОСХД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PONSI.html">Подсистема ведения НСИ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mail.html">Почтовое взаимодействие с внешними системами</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Обмен данными с удостоверяющим центром</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">elvoucher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Обмен данными с удостоверяющим центром</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/UC.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Обмен данными с удостоверяющим центром<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>В целях снижения затрат на организацию защищенного, юридически значимого электронного документооборота в ИС&nbsp;ЭП используются криптографические функции, связанные с созданием и проверкой электронной подписи, шифрованием и дешифрованием электронных документов.</p>
+<p>УЦ осуществляет свою деятельность в качестве аккредитованного УЦ на основании решения Минкомсвязи России, являющегося федеральным органом исполнительной власти, уполномоченным в сфере использования электронной подписи.</p>
+<p>Электронная подпись создается с использованием криптографических алгоритмов в соответствии с ГОСТ Р 34.10 «Информационная технология. Криптографическая защита информации. Процессы формирования и проверки электронной цифровой подписи», ГОСТ&nbsp;Р&nbsp;34.11-94 «Информационная технология. Криптографическая защита информации. Функция хеширования».</p>
+<p>Данные об ЭП поступают от информационных систем ТО посредством протокола SOAP. Для подписания данных используется стандарт OASIS Standart 200401 (<a class="reference external" href="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf</a>). Получаемые от информационных систем ТО и подписанные заявки на создание/изменение ЭП должны быть подписаны электронной цифровой подписью (ЭЦП), а реализованное взаимодействие с УЦ позволяет обеспечить проверку и подтверждение отсутствия сертификата подписанта в реестре отозванных сертификатов УЦ. Сертификат используемой ЭЦП должен быть загружен в ИС&nbsp;ЭП при регистрации ИС&nbsp;ТО.</p>
+<p>Заявки на самостоятельную регистрацию пользователя ТО должны быть подписаны ЭЦП, а реализованное взаимодействие с УЦ позволяет обеспечить проверку и подтверждение отсутствия сертификата подписанта в реестре отозванных сертификатов УЦ.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="./uc.png"><img alt="Алгоритм обработки подписанных ЭЦП сообщений" src="./uc.png" /></a>
+<p class="caption"><span class="caption-text">Алгоритм обработки подписанных ЭЦП сообщений</span></p>
+</div>
+<p>ЭП получает подписанный ЭЦП запрос от ТО:</p>
+<ul class="simple">
+<li>Xml-документ – при запросе ИС&nbsp;ТО;</li>
+<li>Pdf-документ – при самостоятельной регистрации администратора ТО.</li>
+</ul>
+<p>Далее ИС&nbsp;ЭП выполняет следующий алгоритм:</p>
+<ol class="arabic simple">
+<li>ИС&nbsp;ЭП получает сообщение, подписанное ЭЦП;</li>
+<li>Сообщение, подписанное ЭЦП, проверяется с использованием встроенных средств программной платформы (Java 1.8), реализованной в подсистеме проверки электронной подписи;</li>
+<li>С помощью СКЗИ происходит извлечение сертификата из подписанного сообщения. Для сообщений ИС&nbsp;ТО производится валидация – совпадение извлеченного сертификата с сертификатом, соответствующим данному ТО, загруженному в систему;</li>
+<li>ИС&nbsp;ЭП получает список отозванных сертификатов УЦ по соответствующему адресу, указанному в извлеченном из сообщения сертификате;</li>
+<li>Список кэшируется в соответствующую таблицу для того, чтобы в дальнейшем минимизировать количество обращений в УЦ (время жизни кэша реестра отозванных сертификатов – 24 часа);</li>
+<li>Сертификат, полученный из сообщения ТО, проверяется на предмет отсутствия в полученном реестре;</li>
+<li>В случае успешного прохождения проверок, приложение ИС&nbsp;ЭП возвращает положительный ответ;</li>
+<li>ИС&nbsp;ЭП выполняет содержащийся в сообщении запрос и сохраняет в БД исходный запрос.</li>
+</ol>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ESIA.html" class="btn btn-neutral float-right" title="Обмен данными с ЕСИА" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="SISROSTOUR.html" class="btn btn-neutral" title="Обмен данными с СИС Ростуризм" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, dmitrii.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'ru',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Подсистема ведения НСИ &mdash; Документация elvoucher 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Обмен данными с ИС туроператоров, турагентов и финансовых гарантов" href="web-servis.html" />
+    <link rel="prev" title="Подсистема ведения ПОСХД" href="POSHD.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> elvoucher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program.html">Программное обеспечение системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arch.html">Функциональная архитектура системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POK.html">Подсистема оперативного контроля</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POFO.html">Подсистема Формирования отчетов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POSHD.html">Подсистема ведения ПОСХД</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Подсистема ведения НСИ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EFRT.html">Обмен данными с ЕФРТ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mail.html">Почтовое взаимодействие с внешними системами</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UC.html">Обмен данными с удостоверяющим центром</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">elvoucher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Подсистема ведения НСИ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/PONSI.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Подсистема ведения НСИ<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Подсистема обеспечивает  использование информационных ресурсов ИС&nbsp;ЭП для распространения данных актуальных версий справочников НСИ и их актуализации, запросы на предоставление данных реализованы с помощью графического пользовательского интерфейса АРМ ИС&nbsp;ЭП. Структура программного обеспечения ПОНСИ и его взаимодействие с другим программным обеспечением (ПО) ИС&nbsp;ЭП реализована в соответствии с рисунком.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="./ponsi1.jpg"><img alt="Структура программного обеспечения ПОНСИ и его взаимодействие с другим ПО ИС&nbsp;ЭП" src="./ponsi1.jpg" /></a>
+<p class="caption"><span class="caption-text">Структура программного обеспечения ПОНСИ и его взаимодействие с другим ПО ИС&nbsp;ЭП</span></p>
+</div>
+<p>Модуль формирует SQL запросы к ПОСХД на выборку данных справочника, указанного пользователем для отображения. После окончания процесса выборки данных модуль форматирует данные для отображения в АРМ пользователя.</p>
+<p>После внесения изменений в выбранный пользователем справочник и получения его данных, модуль формирует SQL запрос к ПОСХД на формирование новой версии соответствующего справочника НСИ.
+После внесения изменений в выбранный пользователем справочник и получения его данных, модуль формирует SQL запрос к ПОСХД на формирование новой версии классификатора НСИ.</p>
+<p>По запросам ТО на выгрузку данных справочника, с помощью веб-сервиса, обработка которых осуществляется подсистемой ПОТОД, модуль должен сформировать SQL запрос к ПОСХД на выгрузку данных справочника, после чего упаковать их в формат XML и вернуть вызываемой подсистеме.</p>
+<p>Примечание:</p>
+<ul class="simple">
+<li>При реализации ИС&nbsp;ЭП редактирование справочников реализовано только для справочников, отмеченных как редактируемые. Все эталонные справочники доступны пользователям РТ и ОС в режиме просмотра;</li>
+<li>Актуализация и редактирование справочника Туроператоров ЕФРТ осуществляется в подсистеме ПОТОД;</li>
+</ul>
+<p>Так же модуль предназначен для реализации функции рассылки уведомлений о новых версиях справочников во все интегрированные справочники ИС туроператоров после завершения процесса создания новой версии  справочника НСИ.</p>
+<p>Для этого, после создания новой версии справочника НСИ, модуль осуществляет формирование и рассылку по электронной почте сообщений об изменениях справочника(ов) и его(их) новых версиях зарегистрированным в системе организациям туроператоров.</p>
+<p>Ведение справочников подразумевает внесение изменений в них и выполняется в целях актуализации данных НСИ.</p>
+<p>Сведения о необходимости внесения изменений и соответствующие данные формируются в процессе эксплуатации Системы, на основании публикаций изменений общероссийских классификаторов и реестров, являющихся источниками данных справочников НСИ ИС&nbsp;ЭП, а также запросов на изменения, поступивших от ТО.</p>
+<p>Функция позволяет автоматически выполнять:</p>
+<ul class="simple">
+<li>Предоставление данных справочников НСИ для просмотра;</li>
+<li>Внесение изменений в справочники НСИ путем создания их новых версий.</li>
+</ul>
+<p>Ведение классификатора выполняется в целях актуализации (внесения изменений) в классификатор.
+Данные о версии структуры каждого справочника хранятся в поле классификатора, передающем хэш-функцию, формируемую алгоритмом SHA-256, которая принимает совокупность свойств справочника. Структура справочника представлена в виде JSON-файла.</p>
+<p>Распространение изменений в классификаторе выполняется в целях актуализации рабочей копии классификатора.</p>
+<p>В случае отличия данных в загружаемом классификаторе от данных в хранимом классификаторе, внешние системы имеют возможность загрузить актуальную версию справочника.</p>
+<p>В Системе ведется актуальная версия объектов НСИ и предоставляется возможность предоставления классификатора, содержащего данные о актуальных версиях объектов НСИ для просмотра и формирования сообщения на запрос ТО по предоставлению данных объектов НСИ.</p>
+<p>Для доступа к функциям подсистемы используется АРМ, разработанный в виде тонкого клиента.</p>
+<p>Распространение справочных данных выполняется в случае появления в СХД ИС&nbsp;ЭП новой актуальной версии какого-либо из публикуемых справочников НСИ. Функция распространения справочных данных позволяет выполнять:</p>
+<ul class="simple">
+<li>Оповещение ТО по электронной почте о создании новых версий справочников;</li>
+<li>Загрузку ТО классификатора ЭП с актуальной информацией о структуре справочников;</li>
+<li>Формирование эталонных версий справочников НСИ в формате XML по запросам от ТО.</li>
+</ul>
+<p>Для успешного функционирования ИС&nbsp;ЭП-3, в Системе ведутся, как минимум, следующие объекты НСИ:</p>
+<ul class="simple">
+<li>Туроператоры РФ (ЕФРТ);</li>
+<li>Турагенты;</li>
+<li>Типы путевок;</li>
+<li>Виды туристических услуг;</li>
+<li>Статусы путевок;</li>
+<li>Страны;</li>
+<li>Города;</li>
+<li>Авиаперевозчики;</li>
+<li>Ж/Д перевозчики;</li>
+<li>Аэропорты;</li>
+<li>Ж/Д вокзалы и станции;</li>
+<li>Виды документа, удостоверяющего личность;</li>
+<li>Субъекты РФ.</li>
+</ul>
+<p>Объекты НСИ перечисленные далее, реализованы в системе, но участия в функционировании ИС&nbsp;ЭП-3 не принимают:</p>
+<ul class="simple">
+<li>справочник «Сферы туроператорской деятельности»;</li>
+<li>справочник «Статусы услуг»;</li>
+<li>справочник «Регионы мира»;</li>
+<li>справочник «Подрегионы мира»;</li>
+<li>справочник «Типы перевозчиков»;</li>
+<li>справочник «Типы способов связи»;</li>
+<li>справочник «Валюты».</li>
+</ul>
+<p>Ведение учета турагентов выполняется в целях консолидации данных о турагентах, работающих с туроператорами. Распространение справочных данных списка турагентов выполняется в случае, когда справочные данные для внесения изменений поступают из одного источника и являются нормализованными.</p>
+<p>Список объектов НСИ можно скачать по ссылке приведенной ниже:</p>
+<p><a class="reference external" href="./katalognsi.docx">Каталог НСИ</a>.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="web-servis.html" class="btn btn-neutral float-right" title="Обмен данными с ИС туроператоров, турагентов и финансовых гарантов" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="POSHD.html" class="btn btn-neutral" title="Подсистема ведения ПОСХД" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, dmitrii.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'ru',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

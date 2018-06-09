@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ru" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Обмен данными с ЕФРТ &mdash; Документация elvoucher 1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Почтовое взаимодействие с внешними системами" href="mail.html" />
+    <link rel="prev" title="Обмен данными с ИС туроператоров, турагентов и финансовых гарантов" href="web-servis.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> elvoucher
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Структура информационной системы &quot;Электронная путевка&quot;:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="main.html">Основная информация о системе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="program.html">Программное обеспечение системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arch.html">Функциональная архитектура системы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POK.html">Подсистема оперативного контроля</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PODIR.html">Подсистема информирования и доступа к информационным ресурсам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POFO.html">Подсистема Формирования отчетов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POTOD.html">Подсистема оперативной транзакционной обработки данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="POSHD.html">Подсистема ведения ПОСХД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PONSI.html">Подсистема ведения НСИ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Взаимодействие с внешними системами:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="web-servis.html">Обмен данными с ИС туроператоров, турагентов и финансовых гарантов</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Обмен данными с ЕФРТ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Правила формирования ссылок на наборы открытых данных</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">Примеры ссылок на паспорта наборов открытых данных</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mail.html">Почтовое взаимодействие с внешними системами</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AISTOUR.html">Обмен данными с АИС Туризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SISROSTOUR.html">Обмен данными с СИС Ростуризм</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UC.html">Обмен данными с удостоверяющим центром</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ESIA.html">Обмен данными с ЕСИА</a></li>
+<li class="toctree-l1"><a class="reference internal" href="EGISOTB.html">Обмен данными с ЕГИС ОТБ</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Функциональные структуры системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="message.html">Обмен сообщениями между пользователями ИС Электронная путевка</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">elvoucher</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Обмен данными с ЕФРТ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/EFRT.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>Обмен данными с ЕФРТ<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Реестр туроператоров ИС ЭП соответсвует Единому федеральному реестру туроператоров. Синхронизация с ЕФРТ производится раз в сутки.</p>
+<p>Открытые данные ЕФРТ - <a class="reference external" href="http://opendata.russiatourism.ru/opendata/5">http://opendata.russiatourism.ru/opendata/5</a></p>
+<p>Информация о выгружаемых данных хранится в сущности tour_operator_data_loader БД ИС ЭП.</p>
+<p>Выгрузка данных происходит отдельными транзацкиями для каждого региона РФ (tour_operator_data_loader.region_reg_number - номер региона РФ из справочника регионов РФ информационной системы Электронная путевка). В случае если в транзакции по текущему региону возвращается ошибка, то данная транзакция откатывается и система приступает к выгрузке данных по следующему региону.</p>
+<p>Данные по туроператорам хранятся в сущности tour_operator БД ИС ЭП.</p>
+<p>В соответствии с методическими рекомендациями версии 3.0, по публикации открытых данных государственными органами и органами местного самоуправления от 24 мая 2014 года, паспорт набора открытых данных представлен отдельным файлом в формате JSON. Файл имеет название «meta.json».</p>
+<div class="section" id="id2">
+<h2>Правила формирования ссылок на наборы открытых данных<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference external" href="http://opendata">http://opendata</a>.&lt;Адрес официального сайта&gt;/&lt;Код организации&gt;-&lt;Наименование группы наборов&gt;&lt;Код региона&gt;&lt;Код вида набора&gt;/meta.&lt;Расширение формата паспорта набора ОД&gt;</p>
+<p>где:</p>
+<p>&lt;Адрес официального сайта&gt; - russiatourism.ru</p>
+<p>&lt;Код организации&gt; - представляет собой идентификационный номер налогоплательщика - 7708550300</p>
+<p>&lt;Наименование группы наборов&gt; - ReestrRosturizm</p>
+<p>&lt;Код региона&gt;</p>
+<p>&lt;Код вида набора&gt;:</p>
+<ul class="simple">
+<li>Код вида «Стартового набора» - A</li>
+<li>Код вида набора «По состоянию на 00:00 сегодня» - B</li>
+<li>Код вида набора «Изменения за сегодня» - C</li>
+</ul>
+<p>&lt;Расширение формата паспорта набора ОД&gt; - Расширение формата паспорта набора открытых данных. В соответствии с актуальной версией паспорта набора ОД от 04.09.2014 – json.</p>
+</div>
+<div class="section" id="id3">
+<h2>Примеры ссылок на паспорта наборов открытых данных<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Примеры ссылок на паспорта наборов открытых данных:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://opendata.russiatourism.ru/7708550300-ReestrRosturizm1A/meta.json">http://opendata.russiatourism.ru/7708550300-ReestrRosturizm1A/meta.json</a> - 1A – паспорт «Стартового набора» по региону с кодом 1 – «Республика Адыгея»</li>
+<li><a class="reference external" href="http://opendata.russiatourism.ru/7708550300-ReestrRosturizm1B/meta.json">http://opendata.russiatourism.ru/7708550300-ReestrRosturizm1B/meta.json</a> - 1B – паспорт набора «По состоянию на 00:00 сегодня» по региону с кодом 1 – «Республика Адыгея»</li>
+<li><a class="reference external" href="http://opendata.russiatourism.ru/7708550300-ReestrRosturizm1C/meta.json">http://opendata.russiatourism.ru/7708550300-ReestrRosturizm1C/meta.json</a> - 1C – паспорт набора «Изменения за сегодня» по региону с кодом 1 – «Республика Адыгея».</li>
+</ul>
+<table border="1" class="docutils" id="id4">
+<caption><span class="caption-text">Перечень сведений о Туроператоре, получаемый из ЕФРТ.</span><a class="headerlink" href="#id4" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Объект</th>
+<th class="head">Тип</th>
+<th class="head">Описание</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>E1</td>
+<td>String</td>
+<td>Регистрационный номер</td>
+</tr>
+<tr class="row-odd"><td>E2</td>
+<td>String</td>
+<td>Полное наименование туроператора</td>
+</tr>
+<tr class="row-even"><td>E3</td>
+<td>String</td>
+<td>Сокращенное наименование туроператора</td>
+</tr>
+<tr class="row-odd"><td>E4</td>
+<td>String</td>
+<td>Адрес расположения туроператора</td>
+</tr>
+<tr class="row-even"><td>E5</td>
+<td>String</td>
+<td>Почтовый адрес туроператора</td>
+</tr>
+<tr class="row-odd"><td>E6</td>
+<td>String</td>
+<td>Официальный web-сайт</td>
+</tr>
+<tr class="row-even"><td>E7</td>
+<td>String</td>
+<td>ИНН</td>
+</tr>
+<tr class="row-odd"><td>E8</td>
+<td>String</td>
+<td>ОГРН</td>
+</tr>
+<tr class="row-even"><td>E9</td>
+<td>String</td>
+<td>Членство туроператора, для осуществления
+деятельности в области выездного туризма,
+в объединении туроператоров в сфере
+выездного туризма</td>
+</tr>
+<tr class="row-odd"><td>E10</td>
+<td>String</td>
+<td>Адреса структурных подразделений</td>
+</tr>
+<tr class="row-even"><td>E11</td>
+<td>String</td>
+<td>Сумма денежных средств,
+полученных туроператором</td>
+</tr>
+<tr class="row-odd"><td>E12</td>
+<td>String</td>
+<td>Информация о финансовой гарантии.</td>
+</tr>
+<tr class="row-even"><td>E13</td>
+<td>String</td>
+<td>Виды туристической деятельности</td>
+</tr>
+<tr class="row-odd"><td>E14</td>
+<td>Object</td>
+<td>Заказы в Ростуризм на внесение данных в
+единый федеральный реестр туроператоров.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id5">
+<caption><span class="caption-text">Состав данных элемента Е12 ЕФРТ (информация о финансовой гарантии)</span><a class="headerlink" href="#id5" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Объект</th>
+<th class="head">Тип</th>
+<th class="head">Описание</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>E12A</td>
+<td>String</td>
+<td>Название периода</td>
+</tr>
+<tr class="row-odd"><td>E12B</td>
+<td>String</td>
+<td>Общая сумма финансовой гарантии</td>
+</tr>
+<tr class="row-even"><td>E12C</td>
+<td>Array</td>
+<td>Перечень документов.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id6">
+<caption><span class="caption-text">Состав данных элемента Е12С ЕФРТ (перечень документов)</span><a class="headerlink" href="#id6" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Объект</th>
+<th class="head">Тип</th>
+<th class="head">Описание</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>E12C1</td>
+<td>String</td>
+<td>Финансовые гарантии</td>
+</tr>
+<tr class="row-odd"><td>E12C2</td>
+<td>String</td>
+<td>Способ предоставления финансовой гарантии</td>
+</tr>
+<tr class="row-even"><td>E12C3</td>
+<td>String</td>
+<td>Номер документа финансовой гарантии</td>
+</tr>
+<tr class="row-odd"><td>E12C4</td>
+<td>String</td>
+<td>Дата документа финансовой гарантии</td>
+</tr>
+<tr class="row-even"><td>E12C5</td>
+<td>String</td>
+<td>Начальная дата финансовой гарантии</td>
+</tr>
+<tr class="row-odd"><td>E12C6</td>
+<td>String</td>
+<td>Конечная дата финансовой гарантии</td>
+</tr>
+<tr class="row-even"><td>E12C7</td>
+<td>String</td>
+<td>Наименование организации, предоставившей
+финансовые гарантии</td>
+</tr>
+<tr class="row-odd"><td>E12C8</td>
+<td>String</td>
+<td>Адрес расположение организации,
+предоставившей финансовые гарантии</td>
+</tr>
+<tr class="row-even"><td>E12C9</td>
+<td>String</td>
+<td>Почтовый адрес организации,
+предоставившей финансовые гарантии</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils" id="id7">
+<caption><span class="caption-text">Состав данных элемента Е14 ЕФРТ (Заказы в Ростуризм)</span><a class="headerlink" href="#id7" title="Постоянная ссылка на таблицу">¶</a></caption>
+<colgroup>
+<col width="22%" />
+<col width="22%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Объект</th>
+<th class="head">Тип</th>
+<th class="head">Описание</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>E14A</td>
+<td>String</td>
+<td>Номер заказа</td>
+</tr>
+<tr class="row-odd"><td>E14B</td>
+<td>String</td>
+<td>Дата заказа</td>
+</tr>
+<tr class="row-even"><td>E14C</td>
+<td>String</td>
+<td>Количество выданных сертификатов</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mail.html" class="btn btn-neutral float-right" title="Почтовое взаимодействие с внешними системами" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="web-servis.html" class="btn btn-neutral" title="Обмен данными с ИС туроператоров, турагентов и финансовых гарантов" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, dmitrii.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            LANGUAGE:'ru',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
