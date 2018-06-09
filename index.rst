@@ -30,7 +30,6 @@
   
    web-servis
    EFRT
-   mail
    AISTOUR
    SISROSTOUR
    UC
